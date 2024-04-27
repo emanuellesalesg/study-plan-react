@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Task List - Study Application
 
-## Getting Started
+This is a simple task list application developed in React, created to practice the use of reducers and state management.
 
-First, run the development server:
+### Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Add new tasks to the list.
+- Edit the text of existing tasks.
+- Mark tasks as completed.
+- Delete tasks from the list.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Code Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **reducers/listReducer.ts**: Contains the reducer responsible for managing the state of the task list.
+- **types/Item.ts**: Defines the data structure of an item in the task list.
+- **Page.tsx**: Main component of the application, where the user interface is rendered.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Action Types
 
-## Learn More
+There are four types of actions that can be dispatched to update the state of the list:
 
-To learn more about Next.js, take a look at the following resources:
+- **Add Item**
+- **Edit Item**
+- **Toggle Edit**
+- **Remove Item**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### List Reducer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The `listReducer` is responsible for processing these actions and updating the state of the list.
 
-## Deploy on Vercel
+#### Page Component
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The `Page` component is where the user interface is rendered. It includes functionalities such as adding, editing, marking as completed, and deleting tasks.
